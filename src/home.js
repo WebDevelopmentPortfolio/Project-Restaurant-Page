@@ -1,22 +1,16 @@
 
 import homeImage from "./images/2307-w064-n002-555B-p1-555.jpg";
+import timeIcon from "./images/time-icon.png";
+import addressIcon from "./images/address-icon.png";
 
 import { pageContent } from "./index.js";
 
 function homePageImage() {
 
-    const pageImage = {
-        image: homeImage,
-        authorName: 'Matt Pictures',
-        authorURL: 'https://unsplash.com/@photographybymat_26?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText',
-        sourceName: 'Unsplash',
-        sourceURL: 'https://unsplash.com/photos/a-stone-building-with-a-sign-that-says-restaurant-C7PUovEo3ms?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'
-
-    }
-
     const image = document.createElement('img');
     image.className = "home-image";
-    image.src = pageImage.image;
+    image.src = homeImage;
+    image.alt = "restaurant-facade";
     
     const homeImageContainer = document.createElement("div");
     homeImageContainer.className = "home-image-container";
@@ -40,15 +34,31 @@ function homePageText() {
     const infoText = document.createElement("div");
     infoText.className = "info-text";
 
+    const addressContainer = document.createElement("div");
+    addressContainer.className = "address-container";
+    
+    const svgAddress = document.createElement("img");
+    svgAddress.src = addressIcon;
+
     const addressText = document.createElement("p");
     addressText.className = "home-address";
     addressText.textContent = "123 MAIN STREET KIDDING\nCOLORADO 24005";
+
+    addressContainer.append(svgAddress, addressText);
+
+    const openHoursContainer = document.createElement("div");
+    openHoursContainer.className = "open-hours-container";
+    
+    const svgTime = document.createElement("img");
+    svgTime.src = timeIcon;
 
     const openHoursText = document.createElement("p");
     openHoursText.className = "open-hours";
     openHoursText.textContent = "MONDAY - SATURDAY: 7AM - 7PM\nSUNDAY: CLOSED";
 
-    infoText.append(addressText, openHoursText);
+    openHoursContainer.append(svgTime, openHoursText);
+
+    infoText.append(addressContainer, openHoursContainer);
 
     homeTextContainer.append(homeText, infoText);
 

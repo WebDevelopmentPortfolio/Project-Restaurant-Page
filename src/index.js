@@ -4,16 +4,26 @@ import "./styles.css";
 import logoImage from './images/logo-image.png';
 import { homePageContent } from "./home.js";
 import { menuPageContent } from "./menu.js";
+import { contactContent } from "./contact.js";
 
-const pageHeader = document.querySelector(".page-header");
-const navButtons = document.querySelectorAll(".nav-button");
 export const pageContent = document.getElementById("content");
 
+const navButtons = document.querySelectorAll(".nav-button");
 
-const pageHeaderImage = document.createElement("img");
-pageHeaderImage.className = "page-header-image";
-pageHeaderImage.src = logoImage;
-pageHeader.append(pageHeaderImage);
+
+function createPageHeader() {
+
+    const pageHeader = document.querySelector(".page-header");
+    
+    const pageHeaderImage = document.createElement("img");
+    pageHeaderImage.className = "page-header-image";
+    pageHeaderImage.src = logoImage;
+    pageHeaderImage.alt = "logo";
+
+    pageHeader.append(pageHeaderImage);
+
+}
+
 
 
 function navButtonActive(pageName) {
@@ -51,6 +61,7 @@ navButtons.forEach(navButton => {
         }
         else if (pageName === "about") {
             pageContent.replaceChildren();
+            contactContent();
         }
 
 
@@ -61,5 +72,5 @@ navButtons.forEach(navButton => {
 });
 
 
-
+createPageHeader();
 homePageContent();

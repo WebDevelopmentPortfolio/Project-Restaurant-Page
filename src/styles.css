@@ -135,9 +135,10 @@ button.active {
     font-family: "Georgia";
     font-size: 40px;
     text-align: center;
-    color: midnightblue;
+    color: #0D6E99;
 
 }
+
 
 
 .info-text {
@@ -153,14 +154,28 @@ button.active {
 
 .home-address,
 .open-hours {
-    width: 50%;
+    width: 75%;
     font-family: "Georgia";
     font-size: 20px;
     white-space: pre-line;
-    
+    color: #271D1D;
 
 }
 
+.address-container,
+.open-hours-container {
+    display: flex;
+    gap: 10px;
+    width: 50%;
+
+}
+
+
+.address-container img,
+.open-hours-container img {
+    width: 60px;
+    fill: #0D6E99;
+}
 
 
 .menu-container {
@@ -256,17 +271,138 @@ p {
     font-family: "Georgia";
     font-size: 20px;
     font-weight: bold;
-    color:midnightblue;
+    color:#0D6E99;
 
 }
 
 
 .food-description {
-    font-family: "Courier Prime";
+    font-family: "Courier";
     font-size: 16px;
-    color: gray;
+    color: #271D1D;
 }
 
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
+
+}
+
+
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 30px;
+
+}
+
+
+.review-header,
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+
+}
+
+.review-header {
+    color:#0D6E99;
+    font-family: "Georgia";
+    font-size: 40px;
+
+}
+
+
+.reviews-container img {
+    width: 80px;
+    stroke: #0D6E99;
+    fill: none;
+    
+
+}
+
+
+.review-comments p::before {
+    content: "";
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-image: var(--quoteIcon);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+
+.review-comments {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+    
+
+}
+
+
+.review-comments p {
+    font-family: "Courier";
+    font-size: 20px;
+    font-style: italic;
+    color: #271D1D;
+}
+
+
+span {
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+
+.about-us-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid brown;
+    border-radius: 40px;
+    padding: 20px;
+    gap: 10px;
+
+}
+
+.about-us-header {
+    color:#0D6E99;
+    font-family: "Georgia";
+    font-size: 32px;
+
+}
+
+.about-us-container img {
+    width: 40px;
+    stroke: #0D6E99;
+    fill: none;
+
+
+}
+
+
+.about-us-description {
+    font-family: "Courier";
+    font-size: 16px;
+    color: #271D1D;
+
+}
 
 #footer {
     display: flex;
