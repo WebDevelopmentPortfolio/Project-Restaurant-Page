@@ -7,4 +7,6 @@ Using HTML, CSS and JavaScript.
 
 Requirement: Webpack.
 
-Feature: "Tabs" to navigate to different modules.
+Feature: "Tabs" to navigate to different pages.
+
+To see in action, go to https://webdevelopmentportfolio.github.io/Project-Restaurant-Page/
