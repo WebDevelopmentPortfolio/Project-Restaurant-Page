@@ -98,7 +98,7 @@ function createContactContent() {
 
     const aboutUsDesc = document.createElement("p");
     aboutUsDesc.className = "about-us-description";
-    aboutUsDesc.textContent = "We are a family-owned establishment built three generations ago deeply rooted in our love for Colorado, its vibrant people and local food. We hope you find the atmosphere in our place marvelous to gather over dishes that will impress your palate and warm your hearts.";
+    aboutUsDesc.textContent = "We are a family-owned establishment built three generations ago deeply rooted in our love for Colorado, its vibrant people and local food. We hope you find the atmosphere in our place marvelous for gathering with family and friends over dishes that will impress your palate and warm your hearts.";
 
     aboutUsContainer.append(aboutUsHeader, aboutUsDesc);
 
