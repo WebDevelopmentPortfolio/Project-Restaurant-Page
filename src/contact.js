@@ -1,4 +1,3 @@
-
 import commentIcon from "./images/comment-icon.png";
 import quoteImage from "./images/quote-icon.png";
 import aboutUs from "./images/about-us-icon.png"; 
@@ -7,47 +6,34 @@ import { pageContent } from "./index.js";
 
 document.documentElement.style.setProperty('--quoteIcon', `url("${quoteImage}")`);
 
-
 const commentReviews = (function() {
-
     const comments = [
         {
             comment: "Love, love, love this marvelous restaurant! Everything was delicious and the ambience is perfect for hanging out.",
             guest: "Carol Danverse, Vail, CO"
-
         },
         {
             comment: "Not only is the food outstanding but so are the staff. Their pork ribs are truly marvelous!",
             guest: "Tony Spark, Beaver Creek, CO"
-
         },
         {
             comment: "Can't go wrong with anything in the menu. I come back again and again here and each time was marvelous. I highly recommend this place!",
             guest: "Pete Parker, Red Cliff, CO"
-
         },
         {
             comment: "Menu is varied, offering something for everyone. For someone like me who eats out a lot, I find this a marvel.",
             guest: "Bruce Danner, Breckenridge, CO"
-
         }
-
     ]
 
     return {
         getComments: function(index) {
             return comments[index];
-
         }
-
     };
-
 });
 
-
-
 function createContactContent() {
-
     const contactContainer = document.createElement("div");
     contactContainer.className = "contact-container";
 
@@ -76,7 +62,6 @@ function createContactContent() {
         review.append(commentReviews().getComments(i).comment, spanInReview);
         
         reviewComments.append(review);
-
     }
 
     reviewsContainer.append(reviewHeader, reviewComments);
@@ -105,12 +90,8 @@ function createContactContent() {
     contactContainer.append(reviewsContainer, aboutUsContainer);
 
     pageContent.append(contactContainer);
-
 }
 
-
 export function contactContent() {
-
     createContactContent();
-
 }

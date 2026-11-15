@@ -1,4 +1,3 @@
-
 import homeImage from "./images/2307-w064-n002-555B-p1-555.jpg";
 import timeIcon from "./images/time-icon.png";
 import addressIcon from "./images/address-icon.png";
@@ -6,7 +5,6 @@ import addressIcon from "./images/address-icon.png";
 import { pageContent } from "./index.js";
 
 function homePageImage() {
-
     const image = document.createElement('img');
     image.className = "home-image";
     image.src = homeImage;
@@ -17,13 +15,9 @@ function homePageImage() {
     homeImageContainer.append(image);
 
     pageContent.append(homeImageContainer);
-
-    
 }
 
-
 function homePageText() {
-
     const homeTextContainer = document.createElement("div");
     homeTextContainer.className = "home-text-container";
 
@@ -63,13 +57,9 @@ function homePageText() {
     homeTextContainer.append(homeText, infoText);
 
     pageContent.append(homeTextContainer);
-
 }
 
-
 export function homePageContent() {
-
     homePageImage();
     homePageText();
-
 }

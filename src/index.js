@@ -1,4 +1,3 @@
-
 import "./styles.css";
 
 import logoImage from './images/logo-image.png';
@@ -10,9 +9,7 @@ export const pageContent = document.getElementById("content");
 
 const navButtons = document.querySelectorAll(".nav-button");
 
-
 function createPageHeader() {
-
     const pageHeader = document.querySelector(".page-header");
     
     const pageHeaderImage = document.createElement("img");
@@ -21,25 +18,17 @@ function createPageHeader() {
     pageHeaderImage.alt = "logo";
 
     pageHeader.append(pageHeaderImage);
-
 }
 
-
-
 function navButtonActive(pageName) {
-
     navButtons.forEach(navButton => {
         if (navButton.getAttribute('id') === pageName) {
             navButton.classList.add('active');
-        }
-        else {
+        } else {
             navButton.classList.remove('active');
         }
-
     });
-
 }
-
 
 navButtons.forEach(navButton => {
     navButton.addEventListener('click', (event) => {
@@ -52,25 +41,15 @@ navButtons.forEach(navButton => {
         if (pageName === "home") {
             pageContent.replaceChildren();
             homePageContent();
-
-        }
-        else if (pageName === "menu") {
+        } else if (pageName === "menu") {
             pageContent.replaceChildren();
             menuPageContent();
-
-        }
-        else if (pageName === "about") {
+        } else if (pageName === "about") {
             pageContent.replaceChildren();
             contactContent();
         }
-
-
     });
-
-
-
 });
-
 
 createPageHeader();
 homePageContent();
